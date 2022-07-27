@@ -9,7 +9,7 @@ const books: Book[] =[];
 
 export const BooksContext = React.createContext(books);
 
-const BooksProvider = React.memo((props: BooksProviderProps):JSX.Element => {
+const BooksProvider = (props: BooksProviderProps):JSX.Element => {
     const [bookList, setBookList] = useState<Book[]>(books);
     const { children } = props;
 
@@ -37,7 +37,7 @@ const BooksProvider = React.memo((props: BooksProviderProps):JSX.Element => {
         {children}
       </BooksContext.Provider>
     );
-})
+}
 
 interface BooksProviderProps {
   children: React.ReactNode

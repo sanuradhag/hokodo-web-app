@@ -1,8 +1,8 @@
 import { Routes, Route, Navigate } from "react-router-dom";
 
-import BookListWrapper from "./components/book-list/BookListWrapper";
+import BookListWrapper from "./components/book-list-wrapper/BookListWrapper";
 import BookList from "./components/book-list/BookList";
-import BookDetails from "./components/book-list/BookDetails";
+import BookDetails from "./components/book-details/BookDetails";
 
 function App() {
   return (

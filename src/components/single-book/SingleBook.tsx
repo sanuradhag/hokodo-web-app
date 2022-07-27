@@ -19,6 +19,7 @@ const SingleBook = ({ book, hideDetailsLabel }: BookProps): JSX.Element => {
   return (
     <div
       className="my-3 mx-2 w-44 h-72 border border-green rounded shadow-lg hover:scale-110 ease-in duration-300"
+      data-testid="book-wrapper-element"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
@@ -26,16 +27,18 @@ const SingleBook = ({ book, hideDetailsLabel }: BookProps): JSX.Element => {
         <Fragment>
           <img className="w-48 h-40 object-fill" src={cover} alt="book-cover" />
           <div className="flex flex-col justify-between h-[45%] px-2">
-            <div className="font-bold text-center text-lg line-clamp-3">{title}</div>
-            <div className="font-semibold text-center italic mb-1">{author}</div>
+            <div className="font-bold text-center text-lg line-clamp-3" data-testid="book-title">{title}</div>
+            <div className="font-semibold text-center italic mb-1" data-testid="book-author">{author}</div>
           </div>
         </Fragment>
       )}
 
       {(showDetails && !hideDetailsLabel) && (
-         <div className="cursor-pointer h-[70%] my-10  flex justify-center items-center" >
-          <Link className="text-center font-semibold text-green" to={`/book-list/${book.id}`}>See more details</Link>
-         </div>
+        <Link to={`/book-list/${book.id}`}>
+          <div className="cursor-pointer h-[70%] my-10  flex justify-center items-center" data-testid="details-wrapper">
+            <div className="text-center font-semibold text-green"  data-testid="see-more-details">See more details</div>
+          </div>
+        </Link>
       )}
     </div>
   );

@@ -2,7 +2,7 @@ import React from "react";
 
 import { BooksContext } from "../../context/BooksProvider";
 import { Book } from "../../types/book";
-import SingleBook from "./SingleBook";
+import SingleBook from "../single-book/SingleBook";
 
 const BookList = (): JSX.Element => {
   const books = React.useContext(BooksContext);
@@ -14,7 +14,7 @@ const BookList = (): JSX.Element => {
         Book List
       </div>
 
-      <div className="flex align-top items-center flex-wrap mt-10 h-[calc(100vh_-_6rem)] overflow-auto">
+      <div className="flex align-top items-center flex-wrap mt-10 h-[calc(100vh_-_6rem)] overflow-auto" data-testid="book-list-wrapper">
         {books?.map((book: Book) => (
           <SingleBook key={book.id} book={book} />
         ))}
