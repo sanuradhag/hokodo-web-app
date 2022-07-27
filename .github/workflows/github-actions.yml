@@ -6,5 +6,4 @@ jobs:
 
     steps:
       - name:deploy-prod
-        run: |
-          curl -X POST -d '{}' https://api.netlify.com/build_hooks/62e140692faa7022a6d6337b
+        run: curl -X POST -d '{}' https://api.netlify.com/build_hooks/62e140692faa7022a6d6337b
