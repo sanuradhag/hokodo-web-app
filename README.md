@@ -22,5 +22,5 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ## TODO
 
-100% test coverage
+100% test coverage.\
 Test the context
