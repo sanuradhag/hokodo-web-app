@@ -1,8 +1,8 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useCallback, useEffect, useState } from "react";
 
 import { api } from "../api";
 import { BASE_URL } from "../constants";
-import { data } from "../mock";
 import { Book, BookListResponse } from "../types/book";
 
 const books: Book[] =[];
